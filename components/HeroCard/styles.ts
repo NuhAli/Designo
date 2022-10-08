@@ -14,6 +14,7 @@ export const Card = styled.div`
 
   @media screen and (min-width: 768px) {
     width: 80%;
+    width: 91%;
     max-width: 1111px;
     height: 843px;
     border-radius: 8px;

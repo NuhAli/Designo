@@ -85,6 +85,11 @@ export const NavLink = styled.a`
   line-height: 14px;
   letter-spacing: 2px;
   text-align: left;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: rgb(231,129,107)
+  }
   &:last-child {
     padding-right: 0px;
   }

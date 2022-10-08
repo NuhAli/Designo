@@ -19,11 +19,6 @@ border-radius: 8px;
 z-index: 10;
 cursor: pointer;
 
-&:hover {
-  background: #ffad9b;
-  color: white;
-}
-
 @media screen and (min-width: 768px) {
   height: 292px;
   width: 100%;
