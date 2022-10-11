@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-export const Card = styled.div`
+export const CardGrid = styled.div`
   position: relative;
   width: 100%;
-  max-width: 689px;
   height: 250px;
   margin-bottom: 24px;
   border-radius: 8px;
@@ -17,6 +16,31 @@ export const Card = styled.div`
 
   @media screen and (min-width: 768px) {
     height: 200px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    &:first-child {
+      height: 640px;
+      width: 520px;
+      padding-bottom: 0;
+      grid-area: "a";
+    }
+    &:nth-child(2) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 45%;
+      height: 308px;
+      grid-area: "b";
+    }
+    &:nth-child(3) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 45%;
+      height: 308px;
+      grid-area: "c";
+    }
   }
 
   @media screen and (min-width: 1440px) {
@@ -35,13 +59,38 @@ export const Card = styled.div`
       grid-area: "b";
     }
     &:nth-child(3) {
-        position: absolute;
+      position: absolute;
       bottom: 0;
       right: 0;
       width: 541px;
       height: 308px;
       grid-area: "c";
     }
+  }
+`;
+
+export const CardFlex = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 689px;
+  height: 250px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 200px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 541px;
+    height: 308px;
   }
 `;
 
@@ -59,7 +108,7 @@ export const CardBackground = styled.div`
   z-index: 2;
 
   &:hover {
-    background-color: rgba(231,129,107,0.7);
+    background-color: rgba(231, 129, 107, 0.7);
   }
 `;
 

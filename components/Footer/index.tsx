@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import Router, { useRouter } from "next/router";
 import React from "react";
 import FooterCard from "../FooterCard";
 import { footerCardData } from "../FooterCard/data";
@@ -21,6 +22,7 @@ import {
 } from "./styles";
 
 const Footer = () => {
+  const router = useRouter();
   const footerLinks = links.map((link, index) => {
     return (
       <Link key={index} href={link.to} passHref>
@@ -29,12 +31,14 @@ const Footer = () => {
     );
   });
   return (
-    <Container>
+    <Container style={router.pathname === "/contact" ? {paddingTop: 72 }: {paddingTop: 253}}>
       <Content>
-      <FooterCard
-        title={footerCardData.title}
-        description={footerCardData.descriptiom}
-      />
+        {router.pathname !== "/contact" ? (
+          <FooterCard
+            title={footerCardData.title}
+            description={footerCardData.descriptiom}
+          />
+        ) : null}
         <RowTop>
           <Logo>
             <LogoIcon />

@@ -14,18 +14,17 @@ const ServicesBox = styled.div`
   height: auto;
   width: 100%;
   max-width: 1111px;
-  padding: 0 24px;
   margin-bottom: 160px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1024px) {
+    width: 100%;
     height: 640px;
     display: grid;
     justify-content: start;
-    padding: 0;
     grid-template-columns: auto auto;
     grid-column-gap: 30px;
     grid-template-areas: "a b";
@@ -41,11 +40,7 @@ const IllustrationSection = styled.section`
   color: "black";
   margin-bottom: 380px;
 
-  @media screen and (min-width: 768px) {
-    padding: 0 40px;
-  }
-
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1024px) {
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
@@ -71,6 +66,7 @@ const Home: NextPage = () => {
               tabletImage={item.tabletImage}
               mobileImage={item.mobileImage}
               src={item.src}
+              type={"Grid"}
             />
           );
         })}

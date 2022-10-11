@@ -11,14 +11,14 @@ const data = [
     desktopImage: "/assets/home/desktop/image-app-design.jpg",
     tabletImage: "/assets/home/tablet/image-app-design.jpg",
     mobileImage: "/assets/home/mobile/image-app-design.jpg",
-    src: "/web-design",
+    src: "/app-design",
   },
   {
     name: "Graphic Design",
     desktopImage: "/assets/home/desktop/image-graphic-design.jpg",
     tabletImage: "/assets/home/tablet/image-graphic-design.jpg",
     mobileImage: "/assets/home/mobile/image-graphic-design.jpg",
-    src: "/web-design",
+    src: "/graphic-design",
   },
 ];
 

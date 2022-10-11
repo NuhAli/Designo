@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { IoIosArrowForward } from "react-icons/io";
 import { Service } from "../../types/serviceCard";
 import Image from "next/image";
-import { Card, CardBackground, CardText, CardTitle, CardLink } from "./styles";
+import Link from "next/link";
+import { CardBackground, CardText, CardTitle, CardLink, CardFlex, CardGrid } from "./styles";
 
 const ServicesCard = ({
   name,
@@ -11,7 +12,8 @@ const ServicesCard = ({
   mobileImage,
   tabletImage,
   src,
-}: Service) => {
+  type,
+}: Service): JSX.Element | null => {
   const windowWidth = typeof window !== "undefined" && window.innerWidth;
   const [width, setWidth] = useState(windowWidth);
   const [image, setImage] = useState("");
@@ -32,26 +34,34 @@ const ServicesCard = ({
     if (width >= 768) {
       setImage(tabletImage);
     }
-    if (width >= 1440) {
+    if (width >= 1024) {
       setImage(desktopImage);
     }
   };
 
-  return (
-    image && (
-      <Card>
-        <Image src={image as string} alt={name} layout={"fill"} />
-        <CardBackground>
-          <CardText>
-            <CardTitle>{name}</CardTitle>
-            <CardLink>
-              View Project <span> {<IoIosArrowForward />} </span>
-            </CardLink>
-          </CardText>
-        </CardBackground>
-      </Card>
-    )
+  const innerContent = (
+    <>
+      <Image src={image as string} alt={name} layout={"fill"} />
+      <CardBackground>
+        <CardText>
+          <CardTitle>{name}</CardTitle>
+          <CardLink>
+            View Project <span> {<IoIosArrowForward />} </span>
+          </CardLink>
+        </CardText>
+      </CardBackground>
+    </>
   );
+
+  return image ? (
+    <Link href={src}>
+      {type === "Grid" ? (
+        <CardGrid>{innerContent}</CardGrid>
+      ) : (
+        <CardFlex>{innerContent}</CardFlex>
+      )}
+    </Link>
+  ) : null;
 };
 
 export default ServicesCard;

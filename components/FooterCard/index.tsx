@@ -6,8 +6,6 @@ import { IFooterProps } from "../../types/footerCard";
 import Link from "next/link";
 import { Card, TextContainer, CardTitle, CardDescription, CardButton } from "./styles";
 
-
-
 const FooterCard = ({ title, description }: IFooterProps) => {
   return (
     <Card>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Card = styled.div`
   position: relative;
   height: 843px;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: space-between;
@@ -13,15 +13,14 @@ export const Card = styled.div`
   z-index: 2;
 
   @media screen and (min-width: 768px) {
-    width: 80%;
-    width: 91%;
+    width: 100%;
     max-width: 1111px;
     height: 843px;
     border-radius: 8px;
     padding: 60px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1024px) {
     height: 640px;
     border-radius: 8px;
     justify-content: flex-start;
@@ -41,7 +40,7 @@ export const CardPattern = styled.img`
     left: unset;
     right: -110px;
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1024px) {
     right: 0;
   }
 `;
@@ -52,7 +51,7 @@ export const CardPhone = styled.img`
   height: 100%;
   z-index: 4;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1024px) {
     height: unset;
     width: auto;
     top: -65px;
@@ -71,7 +70,7 @@ export const CardInformation = styled.div`
     margin: 0;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1024px) {
     align-items: flex-start;
     margin: 0;
     width: 540px;
@@ -92,7 +91,7 @@ export const CardTitle = styled.h1`
     line-height: 48px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1024px) {
     text-align: left;
   }
 `;
@@ -112,7 +111,7 @@ export const CardBody = styled.p`
     line-height: 26px;
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1024px) {
     text-align: left;
   }
 `;

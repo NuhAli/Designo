@@ -17,7 +17,7 @@ export const Container = styled.nav`
 `;
 
 export const Wrapper = styled.div`
-  height: auto;
+  height: 96px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -33,7 +33,7 @@ export const Logo = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  cursor: pointer;
   p {
     margin-left: 1rem;
     color: #333136;

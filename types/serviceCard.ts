@@ -4,4 +4,5 @@ export interface Service {
     tabletImage: string
     mobileImage:string
     src: string,
+    type: "Grid" | "Flex"
 }
