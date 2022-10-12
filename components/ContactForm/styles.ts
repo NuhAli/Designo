@@ -11,6 +11,9 @@ export const FormBackground = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 
   @media screen and (min-width: 768px) {
     width: 100%;
@@ -33,6 +36,7 @@ export const FormIntroduction = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  z-index: 3;
 
   @media screen and (min-width: 768px) {
     text-align: left;
@@ -52,6 +56,7 @@ export const FormTitle = styled.h1`
   line-height: 36px;
   text-align: center;
   color: #ffffff;
+  z-index: 3;
   @media screen and (min-width: 768px) {
     text-align: left;
   }
@@ -140,7 +145,7 @@ export const FormTextInput = styled.input`
   }
 
   @media screen and (min-width: 1024px) {
-    height: 70px;
+    height: 50px;
   }
 `;
 
@@ -177,3 +182,16 @@ export const FormButton = styled.div`
     color: white;
   }
 `;
+
+export const Image = styled.img`
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 10px;
+  left: -105px;
+
+  @media screen and (min-width: 768px) {
+    top: -100px;
+   left: -60px;
+  }
+`

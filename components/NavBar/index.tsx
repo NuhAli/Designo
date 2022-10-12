@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import links from "./links";
 import {
@@ -7,11 +7,13 @@ import {
   LogoIcon,
   NavLink,
   NavLinks,
-  SidebarIcon,
+  SidebarIconBars,
+  SidebarIconTimes,
   Wrapper,
 } from "./styles";
+import { INavProps } from "../../types/navBar";
 
-export const NavBar = () => {
+export const NavBar = ({ click, handleClick, closeMenu }: INavProps) => {
   const navLinks = links.map((link, index) => {
     return (
       <Link key={index} href={link.to} passHref>
@@ -23,12 +25,16 @@ export const NavBar = () => {
     <Container>
       <Wrapper>
         <Link href={"/"}>
-          <Logo>
+          <Logo onClick={closeMenu}>
             <LogoIcon />
             <p>DESIGNO</p>
           </Logo>
         </Link>
-        <SidebarIcon />
+        {click ? (
+          <SidebarIconTimes onClick={handleClick} />
+        ) : (
+          <SidebarIconBars onClick={handleClick} />
+        )}
         <NavLinks>{navLinks}</NavLinks>
       </Wrapper>
     </Container>

@@ -9,7 +9,7 @@ export const HeroCard = () => {
       <CardInformation>
         <CardTitle>{hero.title}</CardTitle>
         <CardBody>{hero.description}</CardBody>
-        <Link href={"/about"}>
+        <Link href={"/aboutus"}>
         <CardButton>Learn More</CardButton>
         </Link>
       </CardInformation>

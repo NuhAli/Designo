@@ -4,7 +4,15 @@ import { IoIosArrowForward } from "react-icons/io";
 import { Service } from "../../types/serviceCard";
 import Image from "next/image";
 import Link from "next/link";
-import { CardBackground, CardText, CardTitle, CardLink, CardFlex, CardGrid } from "./styles";
+import {
+  CardBackground,
+  CardText,
+  CardTitle,
+  CardLink,
+  CardFlex,
+  CardGrid,
+  ImageContainer,
+} from "./styles";
 
 const ServicesCard = ({
   name,
@@ -41,7 +49,9 @@ const ServicesCard = ({
 
   const innerContent = (
     <>
-      <Image src={image as string} alt={name} layout={"fill"} />
+      <ImageContainer>
+        <Image src={image as string} alt={name} layout={"fill"} />
+      </ImageContainer>
       <CardBackground>
         <CardText>
           <CardTitle>{name}</CardTitle>

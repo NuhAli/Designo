@@ -8,7 +8,7 @@ export const Card = styled.div`
   align-items: center;
   flex-direction: column;
   margin-bottom: 58px;
-
+  position: relative;
   @media screen and (min-width: 1024px) {
     width: 350px
   }

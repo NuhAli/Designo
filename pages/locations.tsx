@@ -31,7 +31,9 @@ const Locations: NextPage = () => {
         imageDesktop={item.imageDesktop}
         name={item.name}
         address={item.address}
-        contact={item.contact} id={item.id}      />
+        contact={item.contact}
+        id={item.id}
+      />
     );
   });
   return (

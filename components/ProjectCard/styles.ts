@@ -27,7 +27,13 @@ export const Card = styled.div`
     width: 100%;
   }
 
-  @media screen and (min-width: 1110px) {
+  @media screen and (min-width: 1024px) {
+    flex-direction: column;
+    width: 100%;
+    height: 478px;
+  }
+
+  @media screen and (min-width: 1440px) {
     flex-direction: column;
     width: 350px;
     height: 478px;
@@ -42,7 +48,7 @@ export const CardImage = styled.div`
     width: 50%;
     height: 100%;
   }
-  @media screen and (min-width: 1110px) {
+  @media screen and (min-width: 1024px) {
     width: 100%;
     height: 70%;
   }
@@ -63,7 +69,7 @@ export const CardText = styled.div`
     height: 100%;
   }
 
-  @media screen and (min-width: 1110px) {
+  @media screen and (min-width: 1024px) {
     width: 100%;
     height: 30%;
   }

@@ -19,7 +19,14 @@ const Projects = styled.section`
   align-items: center;
   margin-bottom: 96px;
 
-  @media screen and (min-width: 1110px) {
+  @media screen and (min-width: 1024px) {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  @media screen and (min-width: 1440px) {
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -39,10 +46,11 @@ const ServicesBox = styled.div`
   align-items: center;
   flex-direction: column;
 
-  @media screen and (min-width: 1110px) {
+  @media screen and (min-width: 1024px) {
     padding: 0;
     height: auto;
-    width: 1110px;
+    width: 100%;
+    max-width: 1110px;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
 import { IServiceHeaderProps } from "../../types/serviceHeader";
 import {
   TextContainer,
   HeaderTitle,
   HeaderDescription,
   HeaderContainer,
+  BackgroundImage,
 } from "./styles";
 
 const ServiceHeader = ({ title, description }: IServiceHeaderProps) => {
@@ -18,12 +18,14 @@ const ServiceHeader = ({ title, description }: IServiceHeaderProps) => {
       setWidth(window.innerWidth);
     }
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, [width]);
 
   return (
     <HeaderContainer>
+      <BackgroundImage
+        src={"/assets/web-design/desktop/bg-pattern-intro-web.svg"}
+      />
       <TextContainer>
         <HeaderTitle>{title}</HeaderTitle>
         <HeaderDescription>{description}</HeaderDescription>

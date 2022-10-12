@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 import { IllustrationCardType } from "../../types/illustrationCard";
+import { BackgroundImage } from "../InformationCard/styles";
 import {
   Card,
   ImageBackground,

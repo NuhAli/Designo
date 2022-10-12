@@ -7,7 +7,7 @@ import { locationData } from "../components/LocationCard/locations";
 import styles from "../styles/Home.module.css";
 
 const IllustrationSection = styled.div`
-  margin: 5rem 0 15rem 0;
+  margin: 160px 0;
   height: auto;
   display: flex;
   flex-direction: column;

@@ -23,6 +23,19 @@ export const Card = styled.div`
   }
 `;
 
+export const BackgroundImage = styled.img`
+  position: absolute;
+  top: 280px;
+  left: 0;
+  height: auto;
+  width: auto;
+
+  @media screen and (min-width: 768px) {
+    top: 100px;
+    left: 100px;
+  }
+`
+
 export const CardReverse = styled.div`
   position: relative;
   width: 100vw;
@@ -85,7 +98,7 @@ export const CardTitle = styled.h2`
   font-size: 32px;
   line-height: 36px;
   color: #e7816b;
-
+  text-align: center;
   @media screen and (min-width: 1024px) {
     text-align: left;
   }
@@ -98,7 +111,7 @@ export const CardDescription = styled.p`
   font-size: 15px;
   line-height: 25px;
   color: #333136;
-
+  text-align: center;
   @media screen and (min-width: 1024px) {
     text-align: left;
   }

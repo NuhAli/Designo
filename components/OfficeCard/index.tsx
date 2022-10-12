@@ -2,7 +2,17 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { IOfficeProps } from "../../types/officeCard";
-import { Card, CardImage, CardSubTitle, CardText, CardTextContainer, CardTitle, DetailRow, Row } from "./styles";
+import {
+  BackgroundImage,
+  Card,
+  CardImage,
+  CardSubTitle,
+  CardText,
+  CardTextContainer,
+  CardTitle,
+  DetailRow,
+  Row,
+} from "./styles";
 
 export const OfficeCard = ({
   imageTablet,
@@ -10,11 +20,15 @@ export const OfficeCard = ({
   name,
   address,
   contact,
-  id
+  id,
 }: IOfficeProps) => {
   const windowWidth = typeof window !== "undefined" && window.innerWidth;
   const [width, setWidth] = useState(windowWidth);
   const [image, setImage] = useState("");
+
+  useEffect(() => {
+    renderBackground()
+  },[])
 
   useEffect(() => {
     function handleResize() {
@@ -36,13 +50,18 @@ export const OfficeCard = ({
   return (
     <Card id={id}>
       <CardImage>
-        <Image
-          alt="Office location Canada"
-          src={image as string}
-          layout={"fill"}
-        />
+        {image && (
+          <Image
+            alt="Office location Canada"
+            src={image as string}
+            layout={"fill"}
+          />
+        )}
       </CardImage>
       <CardTextContainer>
+        <BackgroundImage
+          src={"/assets/shared/desktop/bg-pattern-three-circles.svg"}
+        />
         <CardTitle>{name}</CardTitle>
         <DetailRow>
           <Row>

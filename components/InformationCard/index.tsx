@@ -2,8 +2,15 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { IInformationCard } from "../../types/informationCard";
-import { ImageContainer, TextContainer, Card, CardReverse, CardTitle, CardDescription  } from "./styles";
-
+import {
+  ImageContainer,
+  TextContainer,
+  Card,
+  CardReverse,
+  CardTitle,
+  CardDescription,
+  BackgroundImage,
+} from "./styles";
 
 const InformationCard = ({
   name,
@@ -41,8 +48,11 @@ const InformationCard = ({
 
   const content = (
     <>
+      <BackgroundImage
+        src={"/assets/shared/desktop/bg-pattern-three-circles.svg"}
+      />
       <ImageContainer>
-        <Image src={image} layout={"fill"} alt={name} />
+       {image &&  <Image src={image} layout={"fill"} alt={name} />}
       </ImageContainer>
       <TextContainer>
         <CardTitle>{name}</CardTitle>
@@ -51,7 +61,7 @@ const InformationCard = ({
     </>
   );
 
-  return order === "normal" ? (
+  return order === "normal" && image !== "" ? (
     <Card>{content}</Card>
   ) : (
     <CardReverse>{content}</CardReverse>

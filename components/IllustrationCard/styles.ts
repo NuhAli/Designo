@@ -25,7 +25,7 @@ export const Card = styled.div`
     height: auto;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-right: 30px;
 
     &:last-child {

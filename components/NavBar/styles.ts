@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FaBars } from "react-icons/fa";
+import { FaBars,FaTimes } from "react-icons/fa";
 
 export const Container = styled.nav`
   width: 100%;
@@ -57,7 +57,16 @@ export const LogoIcon = styled.div`
   transform: matrix(0, -1, -1, 0, 0, 0);
 `;
 
-export const SidebarIcon = styled(FaBars)`
+export const SidebarIconBars = styled(FaBars)`
+  color: black;
+  font-size: 1.7rem;
+  cursor: pointer;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const SidebarIconTimes = styled(FaTimes)`
   color: black;
   font-size: 1.7rem;
   cursor: pointer;

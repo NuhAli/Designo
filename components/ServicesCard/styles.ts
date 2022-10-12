@@ -43,7 +43,7 @@ export const CardGrid = styled.div`
     }
   }
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1024px) {
     &:first-child {
       height: 640px;
       width: 541px;
@@ -89,7 +89,8 @@ export const CardFlex = styled.div`
   }
 
   @media screen and (min-width: 1024px) {
-    width: 541px;
+    width: 48%;
+    max-width: 541px;
     height: 308px;
   }
 `;
@@ -112,6 +113,14 @@ export const CardBackground = styled.div`
   }
 `;
 
+export const ImageContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+`
+
 export const CardText = styled.div`
   height: auto;
   width: auto;
@@ -127,6 +136,7 @@ export const CardTitle = styled.p`
   line-height: 36px;
   text-align: center;
   letter-spacing: 1.4px;
+  text-transform: uppercase;
   color: #ffffff;
 `;
 
@@ -138,7 +148,12 @@ export const CardLink = styled.a`
   letter-spacing: 5px;
   text-transform: uppercase;
   vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   span {
+    position: relative;
+    left: 15px;
     color: #e7816b;
   }
 `;

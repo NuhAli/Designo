@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
+  position: relative;
   width: 100vw;
   height: 714px;
   max-width: 1110px;
@@ -50,15 +51,30 @@ export const CardImage = styled.div`
   }
 `;
 
+export const BackgroundImage = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: auto;
+
+  @media screen and (min-width: 768px) {
+    top: -260px;
+    left: 0;
+  }
+`
+
 export const CardTextContainer = styled.div`
   width: 100%;
   height: 394px;
+  position: relative;
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: #fdf3f0;
+  overflow: hidden;
 
   @media screen and (min-width: 768px) {
     height: 326px;
