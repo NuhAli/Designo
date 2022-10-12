@@ -52,22 +52,22 @@ const AboutCard = () => {
     }
   };
   return (
-    image && (
-      <Card>
-        <CardImage>
-          <Image src={image} alt={"hero image"} layout={"fill"} />
-        </CardImage>
-        <TextContainer>
-          <CardBackground src={pattern} />
-          <CardTitle>About Us</CardTitle>
-          <CardDescription>
-            Founded in 2010, we are a creative agency that produces lasting
-            results for our clients. We’ve partnered with many startups,
-            corporations, and nonprofits alike to craft designs that make real
-            impact. We’re always looking forward to creating brands, products,
-            and digital experiences that connect with our clients’ audiences.
-          </CardDescription>
-          <PatternContainer>
+    <Card>
+      <CardImage>
+        {image && <Image src={image} alt={"hero image"} layout={"fill"} />}
+      </CardImage>
+      <TextContainer>
+        <CardBackground src={pattern} />
+        <CardTitle>About Us</CardTitle>
+        <CardDescription>
+          Founded in 2010, we are a creative agency that produces lasting
+          results for our clients. We’ve partnered with many startups,
+          corporations, and nonprofits alike to craft designs that make real
+          impact. We’re always looking forward to creating brands, products, and
+          digital experiences that connect with our clients’ audiences.
+        </CardDescription>
+        <PatternContainer>
+          {pattern && (
             <Image
               src={pattern}
               width={292}
@@ -75,10 +75,10 @@ const AboutCard = () => {
               layout={"responsive"}
               alt={"Pattern"}
             />
-          </PatternContainer>
-        </TextContainer>
-      </Card>
-    )
+          )}
+        </PatternContainer>
+      </TextContainer>
+    </Card>
   );
 };
 
