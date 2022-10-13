@@ -21,15 +21,18 @@ export const CardGrid = styled.div`
   @media screen and (min-width: 1024px) {
     &:first-child {
       height: 640px;
-      width: 520px;
+      min-width: 100%;
+      max-width: 541px;
       padding-bottom: 0;
       grid-area: "a";
+      margin-right: 30px;
     }
     &:nth-child(2) {
       position: absolute;
       top: 0;
       right: 0;
-      width: 45%;
+      width: 50%;
+      max-width: 541px;
       height: 308px;
       grid-area: "b";
     }
@@ -37,32 +40,8 @@ export const CardGrid = styled.div`
       position: absolute;
       bottom: 0;
       right: 0;
-      width: 45%;
-      height: 308px;
-      grid-area: "c";
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    &:first-child {
-      height: 640px;
-      width: 541px;
-      padding-bottom: 0;
-      grid-area: "a";
-    }
-    &:nth-child(2) {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 541px;
-      height: 308px;
-      grid-area: "b";
-    }
-    &:nth-child(3) {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 541px;
+      width: 50%;
+      max-width: 541px;
       height: 308px;
       grid-area: "c";
     }

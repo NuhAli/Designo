@@ -25,7 +25,7 @@ const ServicesBox = styled.div`
     height: 640px;
     display: grid;
     justify-content: start;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 30px;
     grid-template-areas: "a b";
   }

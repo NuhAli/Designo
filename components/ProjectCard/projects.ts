@@ -82,5 +82,77 @@ export const graphicDesignData = [
     name: "Science!",
     description: "A poster made in collaboration with the Federal Art Project",
     image: "/assets/graphic-design/desktop/image-science.jpg",
-  }
+  },
+];
+
+export const projectPageData = [
+  {
+    slug: "web-design",
+    projects: webDesignProjects,
+    title: "Web Design",
+    description:
+      "We build websites that serve as powerful marketing tools and bring memorable brand experiences.",
+    services: [
+      {
+        name: "App Design",
+        desktopImage: "/assets/home/desktop/image-app-design.jpg",
+        tabletImage: "/assets/home/tablet/image-app-design.jpg",
+        mobileImage: "/assets/home/mobile/image-app-design.jpg",
+        src: "/services/app-design",
+      },
+      {
+        name: "Graphic Design",
+        desktopImage: "/assets/home/desktop/image-graphic-design.jpg",
+        tabletImage: "/assets/home/tablet/image-graphic-design.jpg",
+        mobileImage: "/assets/home/mobile/image-graphic-design.jpg",
+        src: "/services/graphic-design",
+      },
+    ],
+  },
+  {
+    slug: "app-design",
+    title: "App Design",
+    description:
+      "Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.",
+    projects: appDesignData,
+    services: [
+      {
+        name: "Web Design",
+        desktopImage: "/assets/home/desktop/image-web-design-large.jpg",
+        tabletImage: "/assets/home/tablet/image-web-design.jpg",
+        mobileImage: "/assets/home/mobile/image-web-design.jpg",
+        src: "/services/web-design",
+      },
+      {
+        name: "Graphic Design",
+        desktopImage: "/assets/home/desktop/image-graphic-design.jpg",
+        tabletImage: "/assets/home/tablet/image-graphic-design.jpg",
+        mobileImage: "/assets/home/mobile/image-graphic-design.jpg",
+        src: "/services/graphic-design",
+      },
+    ],
+  },
+  {
+    slug: "graphic-design",
+    title: "Graphic Design",
+    description:
+      "We deliver eye-catching branding materials that are tailored to meet your business objectives.",
+    projects: graphicDesignData,
+    services: [
+      {
+        name: "Web Design",
+        desktopImage: "/assets/home/desktop/image-web-design-large.jpg",
+        tabletImage: "/assets/home/tablet/image-web-design.jpg",
+        mobileImage: "/assets/home/mobile/image-web-design.jpg",
+        src: "/services/web-design",
+      },
+      {
+        name: "App Design",
+        desktopImage: "/assets/home/desktop/image-app-design.jpg",
+        tabletImage: "/assets/home/tablet/image-app-design.jpg",
+        mobileImage: "/assets/home/mobile/image-app-design.jpg",
+        src: "/services/app-design",
+      },
+    ],
+  },
 ];
