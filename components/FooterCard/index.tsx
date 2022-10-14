@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import Image from "next/image";
+import React from "react";
 import { IFooterProps } from "../../types/footerCard";
 import Link from "next/link";
 import {

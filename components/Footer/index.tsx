@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import Router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import React from "react";
 import FooterCard from "../FooterCard";
 import { footerCardData } from "../FooterCard/data";

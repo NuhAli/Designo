@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
 import { IoIosArrowForward } from "react-icons/io";
 import { Service } from "../../types/serviceCard";
 import Image from "next/image";

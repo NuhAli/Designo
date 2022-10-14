@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import styled from "styled-components";
 import { IllustrationCardType } from "../../types/illustrationCard";
 import { Card, ImageBackground, FadedCircle, TextContainer, CardTitle, CardDescription } from "./styles";
 

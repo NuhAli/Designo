@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
 import { IInformationCard } from "../../types/informationCard";
 import {
   ImageContainer,

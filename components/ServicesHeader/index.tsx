@@ -11,7 +11,6 @@ import {
 const ServiceHeader = ({ title, description }: IServiceHeaderProps) => {
   const windowWidth = typeof window !== "undefined" && window.innerWidth;
   const [width, setWidth] = useState(windowWidth);
-  const [image, setImage] = useState("");
 
   useEffect(() => {
     function handleResize() {

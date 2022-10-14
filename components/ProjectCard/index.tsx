@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import styled from "styled-components";
 import { IProject } from "../../types/project";
 import { Card, CardDescription, CardImage, CardText, CardTitle } from "./styles";
 
